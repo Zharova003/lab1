@@ -187,10 +187,14 @@ Matrix enterIntMatrix() {
     int m, n;
     printf("enter shape of matrix: \n m ");
     scanf("%d", &m);
+    getchar();
     printf("\n n ");
     scanf("%d", &n);
+    getchar();
+
     if (n <= 0 || m <=0)
         Throw(WRONG_DIMENSION);
+    
     int result_arr[m][n];
     for (int i = 0; i < m; i++) {
         for (int j = 0; i < n; j++) {
@@ -205,10 +209,14 @@ Matrix enterRealMatrix(){
     int m, n;
     printf("enter shape of matrix: \n m ");
     scanf("%d", &m);
+    getchar();
     printf("\n n ");
     scanf("%d", &n);
+    getchar();
+
     if (n <= 0 || m <=0)
         Throw(WRONG_DIMENSION);
+
     float result_arr[m][n];
     for (int i = 0; i < m; i++) {
         for (int j = 0; i < n; j++) {
