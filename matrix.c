@@ -28,10 +28,6 @@ Matrix sumMatrix(const Matrix *x1, const Matrix *x2) {
 
     for (size_t i = 0; i < x1->row; i++) {
         for (size_t j = 0; j < x1->column; j++) {
-
-            //ещё нужны проверки на переполнение
-            //то есть, например, если сложим MAX_INT_SIZE + 1
-            //посмотри у меня в работе или погугли
             memcpy(result.arr + i * x1->elementSize * x1->column + j * x1->elementSize,
                    x1->sum(x1->arr + i * x1->elementSize * x1->column + j * x1->elementSize,
                            x2->arr + i * x1->elementSize * x1->column + j * x1->elementSize),
